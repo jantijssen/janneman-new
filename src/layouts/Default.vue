@@ -1,11 +1,15 @@
 <template>
+<transition name="fade" appear>
   <div class="layout">
     <div id="content-wrapper">
       <Header/>
+
       <slot/>
+
     </div>
     <Footer/>
   </div>
+    </transition>
 </template>
 
 <script>
@@ -22,26 +26,47 @@ export default {
 
 
 <style lang="scss">
+
+@import url("https://use.typekit.net/ahb6ubx.css");
+
 body, html {
   height: 100%;
 }
 
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: anonymous-pro, monospace !important  ;
+  color: white !important;
   margin:0;
   padding:0;
   line-height: 1.5;
+}
+
+h1 {
+font-family: nimbus-sans-extended, sans-serif;
+font-style: normal;
+font-weight: 900;
+color: white;
+font-size: 3rem;
+}
+
+.fade-enter-active {
+  transition: opacity 1s;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 
 #app {
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: black;
 }
 
 #content-wrapper {
   flex: 1 0 auto;
-  max-width: 950px;
+  max-width: 1400px;
   width: 90vw;
   margin: 0 auto;
 }
