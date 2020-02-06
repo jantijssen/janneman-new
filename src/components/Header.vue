@@ -30,6 +30,7 @@ query {
 nav {
   width: 100%;
   padding-top: 1rem;
+  z-index: 1;
 }
 
 .navbar-brand {

@@ -4,11 +4,11 @@
   <div class="big-logo-subtitle text-center">
   direction | design | development <br>  freelance digital creator <br> based in amsterdam, the netherlands
   </div>
-  <video autoplay playsinline muted loop preload poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
-  <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ocean-small.webm" />
-  <source src="http://thenewcode.com/assets/videos/ocean-small.mp4" />
+  <video autoplay playsinline muted loop class="big-video">
+  <source src="../assets/video/home-bg.webm" />
+  <source src="../assets/video/home-bg.mp4" />
 </video>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMin meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMin slice">
   <defs>
   <mask id="mask" x="0" y="0" width="100%" height="100%" >
     <rect x="0" y="0" width="100%" height="100%" style="fill:#FFF"/>
@@ -24,8 +24,6 @@
     My real name is Jan Tijssen. I was born in 1983.
     </p>
     </div>
-
-
   </Layout>
 </template>
 
@@ -81,7 +79,12 @@ margin-right: auto;
 }
 
 video {
-width: 100%;
+position: absolute;
+ right: 0;
+ bottom: 0;
+ min-width: 100%;
+ min-height: 100%;
+ z-index: 0;
 }
 
 svg {
@@ -89,14 +92,18 @@ svg {
   position: absolute;
   left: 0;
   height: 100%;
-  top: 130px;
-  opacity: 0.9;
+  top: 0;
+  opacity: 0.88;
 }
 svg text {
   font-family: nimbus-sans-extended, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 14px;
+}
+
+.big-video {
+height: 100vh;
 }
 
 

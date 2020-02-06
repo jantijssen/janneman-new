@@ -1,15 +1,21 @@
 <template>
-<transition name="fade" appear>
+
   <div class="layout">
+
     <div id="content-wrapper">
+
       <Header/>
 
       <slot/>
-
+    
     </div>
     <Footer/>
+
   </div>
-    </transition>
+
+
+
+
 </template>
 
 <script>
@@ -50,11 +56,12 @@ font-size: 3rem;
 }
 
 .fade-enter-active {
-  transition: opacity 1s;
+  transition: margin-top 1s, opacity 1s;
 }
 
 .fade-enter {
   opacity: 0;
+  margin-top: -100px;
 }
 
 #app {
